@@ -36,16 +36,21 @@ var Carro = /** @class */ (function () {
         return this.placa;
     };
     Carro.prototype.setPlaca = function (novaPlaca) {
-        if (novaPlaca.indexOf("-") == 1) {
-            var placaSeparada = novaPlaca.split("-");
+        if (novaPlaca.indexOf("-") == 3) {
+            var placaSeparada = novaPlaca.split("-"); //placaSeparada vira array graças ao split
             var nPlaca = void 0;
             if (placaSeparada[0].length == 3) {
-                placaSeparada[0].toLocaleUpperCase;
+                placaSeparada[0].toUpperCase();
             }
             nPlaca = parseInt(placaSeparada[1]);
             if (typeof nPlaca == "number") {
                 novaPlaca = placaSeparada[0] + "-" + nPlaca;
             }
+        }
+        else if (novaPlaca.indexOf("-") == -1) {
+            var strPlaca = novaPlaca.substring(0, 3);
+            var numPlaca = novaPlaca.substring(3, 7);
+            novaPlaca = strPlaca.toUpperCase() + "-" + numPlaca;
         }
         this.placa = novaPlaca;
     };

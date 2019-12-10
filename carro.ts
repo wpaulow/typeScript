@@ -47,7 +47,7 @@ export class Carro {
             let nPlaca : number;
 
             if(placaSeparada[0].length == 3) {
-                placaSeparada[0].toLocaleUpperCase;
+                placaSeparada[0].toUpperCase();
             }
             nPlaca = parseInt(placaSeparada[1]);
              
@@ -55,7 +55,9 @@ export class Carro {
                 novaPlaca = placaSeparada[0] + "-" + nPlaca;
             }
         } else if (novaPlaca.indexOf("-") == -1) {
-            
+            let strPlaca : string = novaPlaca.substring(0,3);
+            let numPlaca : string = novaPlaca.substring(3,7);
+            novaPlaca = strPlaca.toUpperCase() + "-" + numPlaca;
         }
         
         this.placa = novaPlaca;

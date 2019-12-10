@@ -3,7 +3,7 @@ exports.__esModule = true;
 var teclado = require("readline-sync");
 var carro_1 = require("./carro");
 var c1 = new carro_1.Carro(); //declarada a referência e construído o objeto;
-var ano = teclado.question("Ano?");
+var ano = teclado.question("Ano? ");
 var placa = teclado.question("Placa?");
 c1.setCor("Preto");
 c1.setModelo("Gol Quadrado");

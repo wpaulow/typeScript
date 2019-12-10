@@ -4,7 +4,7 @@ import {Carro} from "./carro";
 
 var c1 : Carro = new Carro(); //declarada a referência e construído o objeto;
 
-let ano: number = teclado.question("Ano?");
+let ano: number = teclado.question("Ano? ");
 
 let placa: string = teclado.question("Placa?");
 
